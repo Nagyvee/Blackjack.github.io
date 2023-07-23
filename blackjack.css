@@ -1,0 +1,47 @@
+body {
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode','Lucida grande','Lucida Sans',Arial, sans-serif,sans-serif;
+text-align: center;
+background-image: url(https://images.pexels.com/photos/2508565/pexels-photo-2508565.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+background-repeat: no-repeat;
+background-size: cover;
+}
+h1 {
+    color: goldenrod;
+    font-size: 40px;
+}
+ 
+p{
+    color: white;
+    font-size: 25px;
+    padding: 2px;
+    line-height: 30px;
+    font-weight: bold;
+}
+
+div {
+    width: 60%;
+    min-height: 450px;
+    margin-left: 20%;
+    margin-top: 7%;
+    overflow: hidden;
+}
+button{
+    background-color: goldenrod;
+    width: 150px;
+    height: 40px;
+    color: #016f32;
+    font-size: 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    margin-top: 4px;
+}
+#player-status {
+    color: rgb(255, 0, 0);
+    font-size: 15px;
+}
+
+#current-cards img {
+    margin-right: 10px;
+  }
+
