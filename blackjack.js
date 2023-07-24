@@ -66,14 +66,14 @@ function renderGame() {
 // game running
     if (totalCards <= 20) {
       message = "Do you want to pick another card 😊";
-      playerCredits -= 12;
+      playerCredits -= 24;
     updatePlayerCredits();
     } else if (totalCards === 21) {
       message = "You WIN. You got the Blackjack 🤩";
       hasBlackjack = true;
-      playerCredits += 120;
+      playerCredits += 150;
     updatePlayerCredits();
-    } else if (totalCards === 30) {
+    } else if (totalCards === 40) {
       message = "Jackpot 🔥🔥🔥🔥";
       hasBlackjack = true;
       playerCredits += 250;
