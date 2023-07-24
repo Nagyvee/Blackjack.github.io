@@ -1,3 +1,4 @@
+//Giving variables
 let totalCards = 0
 let isAlive = false
 let hasBlackjack = false
@@ -9,11 +10,12 @@ let playerStatus = document.getElementById("player-status")
 let nagyVee = document.getElementById("nagy-vee")
 let playerCredits = 1000;
 
+//inserting game-cards images 
 function getCardImage(cardValue) {
     return cardValue + ".jpg"; 
   }
 
-
+// to generate a new card
 function getRandomCard(){
    let cardRoute = Math.floor (Math.random()*13)+1 
    if (cardRoute === 1) {
@@ -24,7 +26,7 @@ function getRandomCard(){
     return cardRoute;
   }
 }
- 
+ // to start the game
  playerStatus.textContent = "Player Credits: R" + 1000
 function start(){
 
@@ -43,23 +45,25 @@ function start(){
         document.getElementById("btn-start").disabled = true;
       }
 }
-
+// render the game
 function renderGame() {
     isAlive = true;
     hasBlackjack = false;
     currentCards.innerHTML = "";
 
+//card images size
     for (let i = 0; i < cards.length; i++) {
       let cardImage = document.createElement("img");
       cardImage.src = "images/card" + getCardImage(cards[i]);
 
-      cardImage.width = 80; 
-      cardImage.height = 100; 
+      cardImage.width = 60; 
+      cardImage.height = 95; 
       currentCards.appendChild(cardImage);
+      
     }
 
     sumEl.textContent = "Total " + totalCards;
-
+// game running
     if (totalCards <= 20) {
       message = "Do you want to pick another card 😊";
       playerCredits -= 12;
@@ -67,9 +71,15 @@ function renderGame() {
     } else if (totalCards === 21) {
       message = "You WIN. You got the Blackjack 🤩";
       hasBlackjack = true;
-      playerCredits += 100;
+      playerCredits += 120;
     updatePlayerCredits();
-    } else {
+    } else if (totalCards === 30) {
+      message = "Jackpot 🔥🔥🔥🔥";
+      hasBlackjack = true;
+      playerCredits += 250;
+    updatePlayerCredits();
+    } 
+    else {
       message = "You LOSE. You're out of the game 😭";
       isAlive = false;
       playerCredits -= 30;
@@ -80,7 +90,7 @@ function renderGame() {
   }
 
 
-
+// to get a new card
  function newCard(){
     if (playerCredits > 4) { if (isAlive === true && hasBlackjack === false){
     let thirdcard = getRandomCard()
@@ -93,13 +103,13 @@ function renderGame() {
     document.getElementById("btn-new").disabled = true;
   }
 }
- 
+ // adding music
  function playBlackjackMusic() {
     let audio = document.getElementById("blackjack-audio");
     audio.play();
   }
 
-
+// player credits function
   function updatePlayerCredits() {
     let creditsDisplay = document.getElementById("credits");
     creditsDisplay.textContent = playerCredits;
