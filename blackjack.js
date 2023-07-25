@@ -69,12 +69,12 @@ function renderGame() {
       playerCredits -= 24;
     updatePlayerCredits();
     } else if (totalCards === 21) {
-      message = "You WIN. You got the Blackjack 🤩 +(280)";
+      message = "You WIN Blackjack. START AGAIN 🤩 +(280)";
       hasBlackjack = true;
       playerCredits += 280;
     updatePlayerCredits();
     } else if (totalCards === 31) {
-      message = "Jackpot 🔥🔥🔥🔥+(750)";
+      message = "Jackpot 🔥🔥🔥, START AGAIN+(750)";
       hasBlackjack = true;
       playerCredits += 750;
     updatePlayerCredits();
