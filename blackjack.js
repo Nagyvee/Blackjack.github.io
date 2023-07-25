@@ -27,7 +27,7 @@ function getRandomCard(){
   }
 }
  // to start the game
- playerStatus.textContent = "Player Credits: R" + 1000
+
 function start(){
 
     if (playerCredits > 4) {
@@ -73,10 +73,10 @@ function renderGame() {
       hasBlackjack = true;
       playerCredits += 180;
     updatePlayerCredits();
-    } else if (totalCards === 30) {
+    } else if (totalCards === 31) {
       message = "Jackpot 🔥🔥🔥🔥+(300)";
       hasBlackjack = true;
-      playerCredits += 300;
+      playerCredits += 500;
     updatePlayerCredits();
     } 
     else {
@@ -112,7 +112,7 @@ function renderGame() {
 // player credits function
   function updatePlayerCredits() {
     let creditsDisplay = document.getElementById("credits");
-    creditsDisplay.textContent = playerCredits;
+    creditsDisplay.textContent = "R " + playerCredits;
   }
 
   
