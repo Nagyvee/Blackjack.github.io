@@ -92,13 +92,13 @@ function renderGame() {
 
 // to get a new card
  function newCard(){
-    if (playerCredits > 4) { if (isAlive === true && hasBlackjack === false){
+    if (playerCredits > 29) { if (isAlive === true && hasBlackjack === false){
     let thirdcard = getRandomCard()
     cards.push(thirdcard)
     totalCards += thirdcard
     renderGame()}
  }
- if (playerCredits <= 12) {
+ if (playerCredits <= 23) {
     alert("You don't have enough credits. Refresh the page to start again.");
     document.getElementById("btn-new").disabled = true;
   }
