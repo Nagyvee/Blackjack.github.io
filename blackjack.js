@@ -74,7 +74,7 @@ function renderGame() {
       playerCredits += 180;
     updatePlayerCredits();
     } else if (totalCards === 31) {
-      message = "Jackpot 🔥🔥🔥🔥+(300)";
+      message = "Jackpot 🔥🔥🔥🔥+(500)";
       hasBlackjack = true;
       playerCredits += 500;
     updatePlayerCredits();
