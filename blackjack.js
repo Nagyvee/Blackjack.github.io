@@ -69,7 +69,7 @@ function renderGame() {
       playerCredits -= 24;
     updatePlayerCredits();
     } else if (totalCards === 21) {
-      message = "You WIN. You got the Blackjack 🤩 +(180)";
+      message = "You WIN. You got the Blackjack 🤩 +(280)";
       hasBlackjack = true;
       playerCredits += 280;
     updatePlayerCredits();
@@ -92,7 +92,7 @@ function renderGame() {
 
 // to get a new card
  function newCard(){
-    if (playerCredits > 29) { if (isAlive === true && hasBlackjack === false){
+    if (playerCredits > 23) { if (isAlive === true && hasBlackjack === false){
     let thirdcard = getRandomCard()
     cards.push(thirdcard)
     totalCards += thirdcard
