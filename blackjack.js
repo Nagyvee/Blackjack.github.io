@@ -80,7 +80,7 @@ function renderGame() {
     updatePlayerCredits();
     } 
     else {
-      message = "You LOSE. You're out of the game 😭";
+      message = "You LOSE. START AGAIN 😭";
       isAlive = false;
       playerCredits -= 30;
     updatePlayerCredits();
