@@ -65,7 +65,7 @@ function renderGame() {
     sumEl.textContent = "Total " + totalCards;
 // game running
     if (totalCards <= 20) {
-      message = "Do you want to pick another card 😊";
+      message = "Almost, Pick a new card 😊";
       playerCredits -= 24;
     updatePlayerCredits();
     } else if (totalCards === 21) {
